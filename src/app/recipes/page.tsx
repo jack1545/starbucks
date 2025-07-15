@@ -89,10 +89,10 @@ export default function RecipesPage() {
         <section className="bg-gradient-to-br from-starbucks-green via-starbucks-dark-green to-gray-900 text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              所有配方
+              All Recipes
             </h1>
             <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-8">
-              浏览我们完整的星巴克秘密菜单配方集合，找到你的下一个最爱
+              Browse our complete collection of Starbucks secret menu recipes and find your next favorite.
             </p>
             
             {/* 搜索栏 */}
@@ -101,7 +101,7 @@ export default function RecipesPage() {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="搜索配方名称、描述或标签..."
+                  placeholder="Search by recipe name, description, or tags..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 rounded-lg border-0 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-starbucks-gold"
@@ -125,7 +125,7 @@ export default function RecipesPage() {
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-starbucks-green focus:border-transparent"
                   >
-                    <option value="all">所有分类</option>
+                    <option value="all">All Categories</option>
                     {categories.map(category => (
                       <option key={category.id} value={category.id}>
                         {category.name}
@@ -140,12 +140,12 @@ export default function RecipesPage() {
                   onChange={(e) => setFilterBy(e.target.value as any)}
                   className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-starbucks-green focus:border-transparent"
                 >
-                  <option value="all">所有难度</option>
-                  <option value="easy">简单</option>
-                  <option value="medium">中等</option>
-                  <option value="hard">困难</option>
-                  <option value="trending">热门</option>
-                  <option value="official">官方</option>
+                  <option value="all">All Filters</option>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                  <option value="trending">Trending</option>
+                  <option value="official">Official</option>
                 </select>
               </div>
 
@@ -159,10 +159,10 @@ export default function RecipesPage() {
                     onChange={(e) => setSortBy(e.target.value as any)}
                     className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-starbucks-green focus:border-transparent"
                   >
-                    <option value="rating">按评分</option>
-                    <option value="popularity">按热度</option>
-                    <option value="prepTime">按时间</option>
-                    <option value="newest">最新</option>
+                    <option value="rating">By Rating</option>
+                    <option value="popularity">By Popularity</option>
+                    <option value="prepTime">By Prep Time</option>
+                    <option value="newest">Newest</option>
                   </select>
                 </div>
 
@@ -184,7 +184,7 @@ export default function RecipesPage() {
 
                 {/* 结果计数 */}
                 <span className="text-sm text-gray-600">
-                  找到 {filteredRecipes.length} 个配方
+                  Found {filteredRecipes.length} recipes
                 </span>
               </div>
             </div>
@@ -208,10 +208,10 @@ export default function RecipesPage() {
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">
-                  没有找到匹配的配方
+                  No Matching Recipes Found
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  试试调整搜索条件或筛选器，或者浏览所有分类
+                  Try adjusting your search or filters, or browse all categories.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button
@@ -222,11 +222,11 @@ export default function RecipesPage() {
                     }}
                     className="btn-starbucks"
                   >
-                    清除筛选
+                    Clear Filters
                   </button>
                   <Link href="/categories">
                     <button className="border-2 border-starbucks-green text-starbucks-green font-semibold py-3 px-6 rounded-lg hover:bg-starbucks-green hover:text-white transition-colors duration-300">
-                      浏览分类
+                      Browse Categories
                     </button>
                   </Link>
                 </div>
@@ -243,28 +243,28 @@ export default function RecipesPage() {
                 <div className="text-3xl font-bold text-starbucks-green mb-2">
                   {recipes.length}
                 </div>
-                <div className="text-gray-600">总配方数</div>
+                <div className="text-gray-600">Total Recipes</div>
               </div>
               
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-3xl font-bold text-starbucks-green mb-2">
                   {recipes.filter(recipe => recipe.isTrending).length}
                 </div>
-                <div className="text-gray-600">热门配方</div>
+                <div className="text-gray-600">Trending Recipes</div>
               </div>
               
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-3xl font-bold text-starbucks-green mb-2">
                   {recipes.filter(recipe => recipe.isOfficial).length}
                 </div>
-                <div className="text-gray-600">官方认证</div>
+                <div className="text-gray-600">Official Recipes</div>
               </div>
               
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-3xl font-bold text-starbucks-green mb-2">
                   {Math.round(recipes.reduce((sum, recipe) => sum + recipe.rating, 0) / recipes.length * 10) / 10}
                 </div>
-                <div className="text-gray-600">平均评分</div>
+                <div className="text-gray-600">Average Rating</div>
               </div>
             </div>
           </div>

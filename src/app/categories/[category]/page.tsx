@@ -26,22 +26,22 @@ export async function generateMetadata(
 
   if (!category) {
     return {
-      title: '分类未找到',
-      description: '这个分类不存在。',
+      title: 'Category Not Found',
+      description: 'This category does not exist.',
     }
   }
   
-  const description = `探索所有${category.name}秘密菜单配方。发现流行和新的${category.name.toLowerCase()}饮品。`
+  const description = `Explore all ${category.name} secret menu recipes. Discover popular and new ${category.name.toLowerCase()} drinks.`
 
   return {
-    title: `${category.name} 秘密菜单配方 - 星巴克`,
+    title: `${category.name} Secret Menu Recipes - Starbucks`,
     description: description,
     openGraph: {
-      title: `${category.name} 秘密菜单配方`,
+      title: `${category.name} Secret Menu Recipes`,
       description: description,
     },
      twitter: {
-      title: `${category.name} 秘密菜单配方`,
+      title: `${category.name} Secret Menu Recipes`,
       description: description,
     },
   }

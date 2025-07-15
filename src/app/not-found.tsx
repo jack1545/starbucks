@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '404: Page Not Found - Starbucks Secret Menu',
+  description: "Oops! The page you're looking for could not be found.",
+}
 
 export default function NotFound() {
   return (
