@@ -1,0 +1,165 @@
+[
+    {
+      "id": "official-cookies-on-top",
+      "name": "Cookies on Top",
+      "type": "Official Secret Menu (Recent)",
+      "description": "A cold brew coffee customized for cookies and cream lovers. It features cold brew with vanilla syrup, vanilla sweet cream cold foam, and cookie crumble topping.",
+      "howToOrder": {
+        "method": "Starbucks App",
+        "steps": [
+          "Download and log in to the Starbucks App.",
+          "Ensure you are a Starbucks Rewards member.",
+          "Navigate to the 'Offers' or 'Secret Menu' tab.",
+          "Select 'Cookies on Top' to automatically add customizations to your order.",
+          "Order at participating stores."
+        ],
+        "notes": "This drink was officially launched in the app on July 14, 2025."
+      }
+    },
+    {
+      "id": "official-dragonfruit-glow-up",
+      "name": "Dragonfruit Glow-Up",
+      "type": "Official Secret Menu (Recent)",
+      "description": "An elevated Mango Dragonfruit Lemonade Refresher with a peach juice blend, topped with vanilla sweet cream cold foam.",
+      "howToOrder": {
+        "method": "Starbucks App",
+        "steps": [
+          "Download and log in to the Starbucks App.",
+          "Ensure you are a Starbucks Rewards member.",
+          "Navigate to the 'Offers' or 'Secret Menu' tab.",
+          "Select 'Dragonfruit Glow-Up' to automatically add customizations to your order.",
+          "Order at participating stores."
+        ],
+        "notes": "This drink was officially launched in the app on July 14, 2025."
+      }
+    },
+    {
+      "id": "official-lemon-tea-pearls",
+      "name": "Lemon, Tea & Pearls",
+      "type": "Official Secret Menu (Recent)",
+      "description": "A refreshing Black Tea Lemonade enhanced with raspberry-flavored popping pearls.",
+      "howToOrder": {
+        "method": "Starbucks App",
+        "steps": [
+          "Download and log in to the Starbucks App.",
+          "Ensure you are a Starbucks Rewards member.",
+          "Navigate to the 'Offers' or 'Secret Menu' tab.",
+          "Select 'Lemon, Tea & Pearls' to automatically add customizations to your order.",
+          "Order at participating stores."
+        ],
+        "notes": "This drink was officially launched in the app on July 14, 2025."
+      }
+    },
+    {
+      "id": "official-just-add-white-mocha",
+      "name": "Just Add White Mocha",
+      "type": "Official Secret Menu (Recent)",
+      "description": "A spin on the Iced Brown Sugar Oatmilk Shaken Espresso, featuring white chocolate mocha sauce and vanilla sweet cream cold foam on top.",
+      "howToOrder": {
+        "method": "Starbucks App",
+        "steps": [
+          "Download and log in to the Starbucks App.",
+          "Ensure you are a Starbucks Rewards member.",
+          "Navigate to the 'Offers' or 'Secret Menu' tab.",
+          "Select 'Just Add White Mocha' to automatically add customizations to your order.",
+          "Order at participating stores."
+        ],
+        "notes": "This drink was officially launched in the app on July 14, 2025."
+      }
+    },
+    {
+      "id": "official-contest-winners",
+      "name": "Secret Menu Contest Winners",
+      "type": "Official Secret Menu (Future)",
+      "description": "Starbucks is hosting a 'Secret Menu Contest' where customers and employees submit their custom drink ideas. Four finalist drinks will be featured in the app.",
+      "howToOrder": {
+        "method": "Starbucks App (Future Feature)",
+        "steps": [
+          "Finalist drinks will be featured in the Starbucks App under the 'Offers' or 'Secret Menu' tab from August 18-25, 2025.",
+          "Users can vote for their favorite on Starbucks Instagram from August 18-20, 2025.",
+          "The grand prize winner's drink may receive further promotion or integration."
+        ],
+        "notes": "Keep an eye on the official Starbucks App and social media for updates on these contest winners."
+      }
+    },
+    {
+      "id": "community-butterbeer-frappuccino",
+      "name": "Butterbeer Frappuccino",
+      "type": "Community/Unofficial Secret Menu (Classic)",
+      "description": "Inspired by the Harry Potter series, this drink tastes like the famous Butterbeer. It's a sweet, creamy, and caramel-infused treat.",
+      "howToOrder": {
+        "method": "Verbal Order (Customization)",
+        "steps": [
+          "Order a Vanilla Bean Frappuccino.",
+          "Add 3 pumps of Caramel Syrup.",
+          "Add 3 pumps of Toffee Nut Syrup.",
+          "Top with Caramel Drizzle (optional: line the cup with caramel drizzle)."
+        ],
+        "notes": "Always be polite and clear when explaining the customizations to your barista, as they won't know it by name."
+      }
+    },
+    {
+      "id": "community-pink-drink-remake",
+      "name": "Pink Drink (Remake/Variations)",
+      "type": "Community/Unofficial Secret Menu (Classic/Variations)",
+      "description": "While the Pink Drink is now official, many community-created variations exist. The original 'secret' version was a Strawberry Acai Refresher with Coconut Milk.",
+      "howToOrder": {
+        "method": "Verbal Order (Customization)",
+        "steps": [
+          "Order a Strawberry Acai Refresher (no water).",
+          "Substitute water with Coconut Milk.",
+          "Add fresh strawberries or freeze-dried strawberries for extra flavor."
+        ],
+        "notes": "Explore other variations online, as the community constantly creates new twists on this popular drink."
+      }
+    },
+    {
+      "id": "community-rainbow-refresher",
+      "name": "Rainbow Refresher",
+      "type": "Community/Unofficial Secret Menu (Trending)",
+      "description": "A visually stunning layered drink, often combining different Starbucks Refreshers or juices to create a rainbow effect.",
+      "howToOrder": {
+        "method": "Verbal Order (Complex Customization)",
+        "steps": [
+          "This is a complex layered drink. You'll need to specify each layer carefully.",
+          "Example: Start with a base of Strawberry Acai Refresher (no water, with ice).",
+          "Then, ask for a layer of Peach Juice (slowly poured over ice to create separation).",
+          "Follow with a layer of Mango Dragonfruit Refresher (again, slowly poured).",
+          "You might need multiple cups or a very patient barista."
+        ],
+        "notes": "Be prepared to explain the layering process. It's best to order during non-peak hours."
+      }
+    },
+    {
+      "id": "community-tiktok-viral-drinks",
+      "name": "TikTok Viral Drinks (General)",
+      "type": "Community/Unofficial Secret Menu (Trending)",
+      "description": "A broad category for any Starbucks custom drink that gains massive popularity on TikTok. These are often unique combinations of existing ingredients.",
+      "howToOrder": {
+        "method": "Verbal Order (Specific Recipe from TikTok)",
+        "steps": [
+          "Find the exact recipe (ingredients and ratios) from a TikTok video.",
+          "Write down or screenshot the recipe.",
+          "Politely tell your barista each ingredient and modification, step-by-step.",
+          "Example: 'Can I get a Venti Iced White Mocha, with sweet cream cold foam, and two pumps of caramel drizzle on top?'"
+        ],
+        "notes": "TikTok trends change rapidly. Always have the precise recipe ready, as baristas cannot keep up with all viral drinks by name."
+      }
+    },
+    {
+      "id": "community-seasonal-hacks",
+      "name": "Seasonal Secret Menu Hacks (General)",
+      "type": "Community/Unofficial Secret Menu (Seasonal)",
+      "description": "Custom drinks created by customers using Starbucks' limited-time seasonal syrups, sauces, or toppings.",
+      "howToOrder": {
+        "method": "Verbal Order (Customization based on Seasonal Items)",
+        "steps": [
+          "Identify the current seasonal offerings (e.g., Pumpkin Spice, Peppermint, Toasted White Chocolate).",
+          "Think about how these can be combined with existing menu items or other secret menu bases.",
+          "Clearly articulate your desired base drink, seasonal additions, and any other modifications."
+        ],
+        "notes": "These are often discovered and shared by the community as soon as new seasonal items drop."
+      }
+    }
+  ]
+  
