@@ -15,6 +15,36 @@ const Header = () => {
       icon: Star,
     },
     {
+      title: "Frappuccinos",
+      href: "#",
+      icon: Coffee,
+      submenu: [
+        { title: "Cream Based", href: "#" },
+        { title: "Coffee & Espresso", href: "#" },
+        { title: "Candy Series", href: "#" },
+        { title: "Dessert Series", href: "#" },
+        { title: "Pop Culture", href: "#" },
+        { title: "Holiday Specials", href: "#" },
+      ]
+    },
+    {
+      title: "Drinks",
+      href: "#",
+      icon: Coffee,
+      submenu: [
+                  { title: "Secret Lattes", href: "#" },
+          { title: "Secret Macchiatos", href: "#" },
+          { title: "Refreshers", href: "/drinks/refreshers" },
+        { title: "Hot Chocolate", href: "#" },
+        { title: "Smoothies", href: "#" },
+      ]
+    },
+    {
+      title: "Teas",
+      href: "#",
+      icon: Coffee,
+    },
+    {
       title: "Official Menu",
       href: "/official-menu",
       icon: Star,

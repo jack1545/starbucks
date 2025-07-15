@@ -8,7 +8,7 @@ const Footer = () => {
     categories: [
       { name: 'Frappuccinos', href: '/categories/frappuccinos' },
       { name: 'Secret Lattes', href: '/secret-lattes' },
-      { name: 'Refreshers', href: '/refreshers' },
+      { name: 'Refreshers', href: '/drinks/refreshers' },
       { name: 'Top 10 Lists', href: '/top-10-lists' },
       { name: 'Holiday Specials', href: '/holiday-specials' },
     ],
