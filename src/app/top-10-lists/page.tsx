@@ -39,18 +39,23 @@ export default function Top10ListsPage() {
       <Header />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-starbucks-green to-starbucks-dark-green text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Top 10 Lists
-                <span className="block text-green-200 text-3xl md:text-4xl mt-2">
+        <section 
+          className="bg-cover bg-center text-white"
+          style={{ backgroundImage: "url('/starbucks_secret_menu_top10.png')" }}
+        >
+          <div className="bg-black bg-opacity-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+              <div className="text-center">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                  Top 10 Lists
+                </h1>
+                <h2 className="text-3xl md:text-4xl text-green-200 mt-2 font-semibold">
                   Popular Drinks & Barista Picks
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
-                Explore Starbucks' most popular drinks, see what real customers are choosing, and get expert recommendations from baristas. Data reveals trends, taste sets them.
-              </p>
+                </h2>
+                <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed mt-4">
+                  Explore Starbucks' most popular drinks, see what real customers are choosing, and get expert recommendations from baristas. Data reveals trends, taste sets them.
+                </p>
+              </div>
             </div>
           </div>
         </section>
