@@ -7,17 +7,17 @@ const Footer = () => {
   const footerLinks = {
     categories: [
       { name: 'Frappuccinos', href: '/categories/frappuccinos' },
-      { name: 'Secret Lattes', href: '/categories/secret-lattes' },
-      { name: 'Refreshers', href: '/categories/refreshers' },
-      { name: 'Top 10 Lists', href: '/categories/top-10' },
-      { name: 'Holiday Specials', href: '/categories/holiday' },
+      { name: 'Secret Lattes', href: '/secret-lattes' },
+      { name: 'Refreshers', href: '/refreshers' },
+      { name: 'Top 10 Lists', href: '/top-10-lists' },
+      { name: 'Holiday Specials', href: '/holiday-specials' },
     ],
     resources: [
       { name: 'How to Order', href: '/how-to-order' },
       { name: 'DIY Recipes', href: '/diy-recipes' },
-      { name: 'Nutrition Info', href: '/nutrition' },
-      { name: 'Starbucks App Guide', href: '/app-guide' },
-      { name: 'Latest Trends', href: '/trends' },
+      { name: 'Nutrition Info', href: '/nutrition-info' },
+      { name: 'Starbucks App Guide', href: '/starbucks-app-guide' },
+      { name: 'Latest Trends', href: '/latest-trend' },
     ],
     company: [
       { name: 'About Us', href: '/about' },

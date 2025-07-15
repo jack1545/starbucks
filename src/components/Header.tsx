@@ -11,38 +11,8 @@ const Header = () => {
   const navigationItems = [
     {
       title: "Top 10's",
-      href: "/categories/top-10",
+      href: "/top-10-lists",
       icon: Star,
-    },
-    {
-      title: "Frappuccinos",
-      href: "/categories/frappuccinos",
-      icon: Coffee,
-      submenu: [
-        { title: "Cream Based", href: "/categories/cream-based" },
-        { title: "Coffee & Espresso", href: "/categories/coffee-espresso" },
-        { title: "Candy Series", href: "/categories/candy" },
-        { title: "Dessert Series", href: "/categories/dessert" },
-        { title: "Pop Culture", href: "/categories/pop-culture" },
-        { title: "Holiday Specials", href: "/categories/holiday" },
-      ]
-    },
-    {
-      title: "Drinks",
-      href: "/categories/drinks",
-      icon: Coffee,
-      submenu: [
-        { title: "Secret Lattes", href: "/categories/secret-lattes" },
-        { title: "Secret Macchiatos", href: "/categories/secret-macchiatos" },
-        { title: "Refreshers", href: "/categories/refreshers" },
-        { title: "Hot Chocolate", href: "/categories/hot-chocolate" },
-        { title: "Smoothies", href: "/categories/smoothies" },
-      ]
-    },
-    {
-      title: "Teas",
-      href: "/categories/teas",
-      icon: Coffee,
     },
     {
       title: "Official Menu",
