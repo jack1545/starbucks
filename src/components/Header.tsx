@@ -16,7 +16,7 @@ const Header = () => {
     },
     {
       title: "Frappuccinos",
-      href: "#",
+      href: "/categories/frappuccinos",
       icon: Coffee,
       submenu: [
         { title: "Cream Based", href: "#" },
