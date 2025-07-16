@@ -279,6 +279,20 @@ export default function SecretLattes() {
           </h2>
           
           <div className="max-w-4xl mx-auto">
+            <div className="relative h-48 mb-8 rounded-lg overflow-hidden">
+              <img 
+                src="/starbucks_secret_menu.webp" 
+                alt="Starbucks Secret Menu Ordering Guide"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div className="text-center text-white px-4">
+                  <h3 className="text-2xl font-bold mb-2">Ordering Made Easy</h3>
+                  <p className="text-lg opacity-90">Follow these tips for a smooth secret menu experience</p>
+                </div>
+              </div>
+            </div>
+            
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <h3 className="text-xl font-semibold text-starbucks-green mb-4">✅ Do This</h3>

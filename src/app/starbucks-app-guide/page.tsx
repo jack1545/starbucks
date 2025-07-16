@@ -10,6 +10,13 @@ export default function StarbucksAppGuide() {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
+          <div className="mb-8">
+            <img 
+              src="/starbucks_app_development_guide.jpg" 
+              alt="Starbucks App Development Guide" 
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+            />
+          </div>
           <h1 className="text-5xl font-bold text-green-700 mb-4">
             Starbucks App Guide
           </h1>
@@ -28,6 +35,13 @@ export default function StarbucksAppGuide() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Rewards Program */}
             <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-starbucks-green">
+              <div className="mb-4">
+                <img 
+                  src="/starbucks_rewards_collect_stars.webp" 
+                  alt="Starbucks Rewards Collect Stars" 
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-starbucks-green mb-4">
                 🌟 Starbucks® Rewards Program
               </h3>
@@ -41,6 +55,13 @@ export default function StarbucksAppGuide() {
 
             {/* Star Earning System */}
             <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-starbucks-green">
+              <div className="mb-4">
+                <img 
+                  src="/starbucks_rewards_free_drinks.webp" 
+                  alt="Starbucks Rewards Free Drinks" 
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-starbucks-green mb-4">
                 ⭐ Star Earning System
               </h3>
@@ -54,6 +75,13 @@ export default function StarbucksAppGuide() {
 
             {/* Partnership Benefits */}
             <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-starbucks-green">
+              <div className="mb-4">
+                <img 
+                  src="/Starbucks-secret-menu.webp" 
+                  alt="Starbucks Rewards Gold Benefits" 
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-starbucks-green mb-4">
                 🤝 Partnership Benefits
               </h3>
@@ -67,6 +95,13 @@ export default function StarbucksAppGuide() {
 
             {/* Mobile Ordering */}
             <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-starbucks-green">
+              <div className="mb-4">
+                <img 
+                  src="/starbucks_mobile_order_pay.webp" 
+                  alt="Starbucks Mobile Order and Pay" 
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-starbucks-green mb-4">
                 📱 Mobile Ordering
               </h3>
@@ -80,6 +115,13 @@ export default function StarbucksAppGuide() {
 
             {/* Payment Convenience */}
             <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-starbucks-green">
+              <div className="mb-4">
+                <img 
+                  src="/starbucks_customization.webp" 
+                  alt="Starbucks Payment and Customization" 
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-starbucks-green mb-4">
                 💳 Payment & Convenience
               </h3>
@@ -93,6 +135,13 @@ export default function StarbucksAppGuide() {
 
             {/* Additional Features */}
             <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-starbucks-green">
+              <div className="mb-4">
+                <img 
+                  src="/brand_reputation_app_highlights.gif" 
+                  alt="Starbucks App Highlights" 
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-starbucks-green mb-4">
                 🎁 Additional Features
               </h3>
@@ -114,6 +163,13 @@ export default function StarbucksAppGuide() {
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="mb-6">
+                <img 
+                  src="/starbucks_most_popular_drinks.jpg" 
+                  alt="Starbucks Most Popular Drinks" 
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-2xl font-semibold text-starbucks-green mb-6">
                 Getting Started
               </h3>
