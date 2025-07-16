@@ -15,11 +15,11 @@ const popularSearches = [
 ]
 
 const exploreCategories = [
-  { name: 'Frappuccinos', href: '/frappuccinos', color: 'bg-category-pink' },
-  { name: 'Iced Drinks', href: '/drinks/iced', color: 'bg-category-blue' },
-  { name: 'Hot Drinks', href: '/drinks/hot', color: 'bg-category-orange' },
+  { name: 'Frappuccinos', href: '#', color: 'bg-category-pink' },
+  { name: 'Iced Drinks', href: '#', color: 'bg-category-blue' },
+  { name: 'Hot Drinks', href: '#', color: 'bg-category-orange' },
   { name: 'Refreshers', href: '/drinks/refreshers', color: 'bg-category-purple' },
-  { name: 'Seasonal Specials', href: '/seasonal', color: 'bg-category-red' },
+  { name: 'Seasonal Specials', href: '#', color: 'bg-category-red' },
   { name: 'DIY Recipes', href: '/diy-recipes', color: 'bg-starbucks-green' }
 ]
 
@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-starbucks-green via-starbucks-dark-green to-gray-900 text-white py-20">
@@ -42,15 +42,15 @@ export default function HomePage() {
                 Discover Beyond the Menu: Official & Community Starbucks Creations
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link href="/frappuccinos">
+              <Link href="#">
                 <button className="btn-starbucks flex items-center">
                   <Coffee className="w-5 h-5 mr-2" />
                   Explore Recipes
                 </button>
               </Link>
-              <Link href="/app-guide">
+              <Link href="#">
                 <button className="bg-white text-starbucks-green font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg flex items-center">
                   <Star className="w-5 h-5 mr-2" />
                   Official App Guide
@@ -93,7 +93,7 @@ export default function HomePage() {
             </div>
 
             <div className="text-center mt-12">
-              <Link href="/recipes">
+              <Link href="#">
                 <button className="btn-starbucks flex items-center mx-auto">
                   View All Recipes
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -154,7 +154,7 @@ export default function HomePage() {
             <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-6">Popular Searches:</h3>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               {popularSearches.map((search, index) => (
-                <Link key={index} href={`/search?q=${encodeURIComponent(search)}`}>
+                <Link key={index} href="#">
                   <span className="bg-green-100 text-starbucks-green px-4 py-2 rounded-full hover:bg-green-200 transition duration-300 shadow-sm cursor-pointer text-sm">
                     {search}
                   </span>
@@ -211,12 +211,12 @@ export default function HomePage() {
               Dive into our extensive collection of <strong>Starbucks secret menu recipes</strong>, learn <strong>how to order custom Starbucks drinks</strong>, and become a true Starbucks connoisseur. Your next favorite drink is just a click away!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/recipes">
+              <Link href="#">
                 <button className="bg-white text-starbucks-green font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
                   Browse All Recipes
                 </button>
               </Link>
-              <Link href="/how-to-order">
+              <Link href="#">
                 <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-starbucks-green transition-colors duration-300">
                   Learn How to Order
                 </button>

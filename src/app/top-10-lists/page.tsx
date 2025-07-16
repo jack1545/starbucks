@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -39,55 +41,75 @@ export default function Top10ListsPage() {
       <Header />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section 
-          className="bg-cover bg-center text-white"
-          style={{ backgroundImage: "url('/starbucks_secret_menu_top10.png')" }}
-        >
-          <div className="bg-black bg-opacity-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-              <div className="text-center">
-                <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                  Top 10 Lists
-                </h1>
-                <h2 className="text-3xl md:text-4xl text-green-200 mt-2 font-semibold">
-                  Popular Drinks & Barista Picks
-                </h2>
-                <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed mt-4">
-                  Explore Starbucks' most popular drinks, see what real customers are choosing, and get expert recommendations from baristas. Data reveals trends, taste sets them.
-                </p>
+        <section className="relative text-white overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src="/starbucks_secret_menu_top10.png"
+              alt="Top 10 Starbucks Drinks"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-starbucks-gold text-white rounded-full mb-6">
+                <span className="text-3xl">🏆</span>
               </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Top 10 Lists
+              </h1>
+              <h2 className="text-3xl md:text-4xl text-green-200 mt-2 font-semibold">
+                Popular Drinks & Barista Picks
+              </h2>
+              <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed mt-4">
+                Explore Starbucks' most popular drinks, see what real customers are choosing, and get expert recommendations from baristas. Data reveals trends, taste sets them.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Key Statistics */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-white relative">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <Image
+              src="/starbucks_most_popular_drinks.jpg"
+              alt="Popular Drinks Background"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Key Statistics & Insights</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Based on real sales data and consumer surveys, here are the core trends in the Starbucks drink market.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-green-50 p-12 rounded-3xl text-center">
+              <div className="bg-white/95 backdrop-blur-sm p-12 rounded-3xl text-center shadow-lg border border-green-100">
                 <div className="text-5xl font-bold text-starbucks-green mb-4">75%</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Cold Drinks Dominate</h3>
                 <p className="text-gray-600 text-lg">
                   Cold drinks make up the vast majority of Starbucks' total beverage sales, reflecting a strong consumer preference for refreshing options.
                 </p>
               </div>
-              
-              <div className="bg-green-50 p-12 rounded-3xl text-center">
+
+              <div className="bg-white/95 backdrop-blur-sm p-12 rounded-3xl text-center shadow-lg border border-green-100">
                 <div className="text-5xl font-bold text-starbucks-green mb-4">9/10</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Iced Drinks on the List</h3>
                 <p className="text-gray-600 text-lg">
                   Nine out of the top ten drinks are iced, with White Hot Chocolate being the only hot option.
                 </p>
               </div>
-              
-              <div className="bg-green-50 p-12 rounded-3xl text-center">
+
+              <div className="bg-white/95 backdrop-blur-sm p-12 rounded-3xl text-center shadow-lg border border-green-100">
                 <div className="text-5xl font-bold text-starbucks-green mb-4">#1</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Caramel is King</h3>
                 <p className="text-gray-600 text-lg">
@@ -107,7 +129,7 @@ export default function Top10ListsPage() {
                 Based on Reddit user surveys, this list reflects the most popular Starbucks drinks, showcasing true consumer preferences.
               </p>
             </div>
-            
+
             <div className="space-y-4">
               {topDrinks.map((drink, index) => (
                 <div key={index} className={`
@@ -118,20 +140,20 @@ export default function Top10ListsPage() {
                     <div className="flex items-center space-x-6">
                       <div className={`
                         w-12 h-12 rounded-full flex items-center justify-center font-bold text-white text-xl
-                        ${drink.rank === 1 ? 'bg-gradient-to-r from-starbucks-gold to-yellow-600' : 
+                        ${drink.rank === 1 ? 'bg-gradient-to-r from-starbucks-gold to-yellow-600' :
                           drink.rank === 2 ? 'bg-gradient-to-r from-gray-400 to-gray-500' :
-                          drink.rank === 3 ? 'bg-gradient-to-r from-yellow-700 to-amber-700' :
-                          'bg-gradient-to-r from-starbucks-green to-green-500'}
+                            drink.rank === 3 ? 'bg-gradient-to-r from-yellow-700 to-amber-700' :
+                              'bg-gradient-to-r from-starbucks-green to-green-500'}
                       `}>
                         {drink.rank}
                       </div>
-                      
+
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-gray-900">{drink.name}</h3>
                         <p className="text-gray-600 mt-1">{drink.description}</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex space-x-3">
                       <span className={`
                         px-3 py-1 rounded-full text-sm font-medium
@@ -159,26 +181,54 @@ export default function Top10ListsPage() {
                 Expert recommendations from frontline Starbucks baristas. These drinks are not only loved by customers but also endorsed by their makers.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {baristaFaves.map((drink, index) => (
-                <div key={index} className="bg-green-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-center mb-6">
-                    <div className="text-4xl mb-4">👨‍🍳</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{drink.name}</h3>
-                    <span className="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm font-medium">
-                      {drink.category}
-                    </span>
+              {baristaFaves.map((drink, index) => {
+                // Map drinks to appropriate images
+                const getImageForDrink = (drinkName: string) => {
+                  if (drinkName.includes('Brown Sugar Oatmilk')) return '/starbucks-caramel-snickerdoodle-macchiato.jpg';
+                  if (drinkName.includes('Chai Tea')) return '/TikTok_Sunset_Tea.webp';
+                  if (drinkName.includes('White Mocha')) return '/Secret_Caramel_Macchiato.webp';
+                  if (drinkName.includes('Matcha')) return '/Dragon_Fruit_Glow-Up.jpg';
+                  if (drinkName.includes('Blonde Espresso')) return '/CaffeLatte.jpg';
+                  if (drinkName.includes('Refreshers')) return '/SummerBerryRefreshers.jpg';
+                  return '/starbucks_most_popular_drinks_1.jpg'; // default
+                };
+
+                return (
+                  <div key={index} className="bg-green-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    {/* Image Header */}
+                    <div className="relative h-48">
+                      <Image
+                        src={getImageForDrink(drink.name)}
+                        alt={drink.name}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <span className="px-3 py-1 bg-green-200/90 text-green-800 rounded-full text-sm font-medium">
+                          {drink.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-8">
+                      <div className="text-center mb-6">
+                        <div className="text-4xl mb-4">👨‍🍳</div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">{drink.name}</h3>
+                      </div>
+
+                      <div className="bg-white rounded-xl p-4">
+                        <h4 className="font-semibold text-gray-800 mb-2">Why we love it:</h4>
+                        <p className="text-gray-600 italic">"{drink.reason}"</p>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <div className="bg-white rounded-xl p-4">
-                    <h4 className="font-semibold text-gray-800 mb-2">Why we love it:</h4>
-                    <p className="text-gray-600 italic">"{drink.reason}"</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
-            
+
             <div className="mt-12 bg-gradient-to-r from-starbucks-green to-starbucks-dark-green rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">💡 Barista's Tip</h3>
               <p className="text-green-100 text-lg">
@@ -197,57 +247,57 @@ export default function Top10ListsPage() {
                 A deep dive into the category distribution of popular drinks to understand underlying consumer trends.
               </p>
             </div>
-            
+
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="bg-white rounded-3xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">🥤 Drink Type Analysis</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-700 font-medium">Macchiato Series</span>
                     <div className="flex items-center">
                       <div className="w-32 bg-gray-200 rounded-full h-3 mr-3">
-                        <div className="bg-green-500 h-3 rounded-full" style={{width: '20%'}}></div>
+                        <div className="bg-green-500 h-3 rounded-full" style={{ width: '20%' }}></div>
                       </div>
                       <span className="text-sm text-gray-600">2 Drinks</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-700 font-medium">Frappuccino Series</span>
                     <div className="flex items-center">
                       <div className="w-32 bg-gray-200 rounded-full h-3 mr-3">
-                        <div className="bg-green-500 h-3 rounded-full" style={{width: '30%'}}></div>
+                        <div className="bg-green-500 h-3 rounded-full" style={{ width: '30%' }}></div>
                       </div>
                       <span className="text-sm text-gray-600">3 Drinks</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-700 font-medium">Latte Series</span>
                     <div className="flex items-center">
                       <div className="w-32 bg-gray-200 rounded-full h-3 mr-3">
-                        <div className="bg-green-500 h-3 rounded-full" style={{width: '20%'}}></div>
+                        <div className="bg-green-500 h-3 rounded-full" style={{ width: '20%' }}></div>
                       </div>
                       <span className="text-sm text-gray-600">2 Drinks</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-700 font-medium">Other Series</span>
                     <div className="flex items-center">
                       <div className="w-32 bg-gray-200 rounded-full h-3 mr-3">
-                        <div className="bg-green-500 h-3 rounded-full" style={{width: '30%'}}></div>
+                        <div className="bg-green-500 h-3 rounded-full" style={{ width: '30%' }}></div>
                       </div>
                       <span className="text-sm text-gray-600">3 Drinks</span>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-white rounded-3xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">🌡️ Temperature Preference</h3>
-                
+
                 <div className="text-center mb-8">
                   <div className="relative w-48 h-48 mx-auto">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-starbucks-green to-green-600"></div>
@@ -259,7 +309,7 @@ export default function Top10ListsPage() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-blue-50 rounded-xl">
                     <span className="text-blue-800 font-medium">🧊 Iced Drinks</span>
@@ -276,31 +326,43 @@ export default function Top10ListsPage() {
         </section>
 
         {/* Home Products */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-white relative">
+          {/* Background Image */}
+          <div className="absolute inset-0 opacity-5">
+            <Image
+              src="/starbucks-drink-guide-homemade-frappuccinos.jpg"
+              alt="Home Coffee Background"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">🏠 Bestselling At-Home Coffee</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Extend the Starbucks experience to your home with these products that let you enjoy barista-quality coffee anytime.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {homeProducts.map((product, index) => (
-                <div key={index} className="bg-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div key={index} className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-100">
                   <div className="text-center mb-4">
-                    <div className="text-3xl mb-3">☕</div>
+                    <div className="w-16 h-16 bg-starbucks-green text-white rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-2xl">☕</span>
+                    </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
                     <span className="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm font-medium">
                       {product.type}
                     </span>
                   </div>
-                  
+
                   <p className="text-gray-600 text-center">{product.description}</p>
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-12 bg-green-100 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">🌟 Secrets to Successful Home Brewing</h3>
               <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -333,7 +395,7 @@ export default function Top10ListsPage() {
                 Based on the top charts, here's an in-depth analysis of changing consumer preferences and market trends.
               </p>
             </div>
-            
+
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
@@ -345,7 +407,7 @@ export default function Top10ListsPage() {
                     ✓ 75% of total sales are from cold drinks
                   </div>
                 </div>
-                
+
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">🍯 Preference for Caramel Flavors</h3>
                   <p className="text-gray-600 mb-4">
@@ -355,7 +417,7 @@ export default function Top10ListsPage() {
                     ✓ 4 of the top 10 drinks are caramel-based
                   </div>
                 </div>
-                
+
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">🎨 Demand for Customization</h3>
                   <p className="text-gray-600 mb-4">
@@ -366,22 +428,37 @@ export default function Top10ListsPage() {
                   </div>
                 </div>
               </div>
-              
-              <div className="bg-gradient-to-br from-green-200 to-starbucks-green rounded-3xl p-12 text-center">
-                <div className="text-6xl mb-6">🏆</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Market Insights</h3>
-                <p className="text-green-50 text-lg mb-6">
-                  The rankings not only reflect current preferences but also signal future directions in beverage development. Starbucks continues to lead industry trends through constant innovation and experience optimization.
-                </p>
-                
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="bg-white rounded-xl p-4">
-                    <div className="text-2xl font-bold text-starbucks-green">90%</div>
-                    <div className="text-sm text-gray-600">Iced Drink Preference</div>
+
+              <div className="relative">
+                {/* Main insight card with background image */}
+                <div className="relative bg-gradient-to-br from-green-200 to-starbucks-green rounded-3xl p-12 text-center overflow-hidden">
+                  {/* Background image overlay */}
+                  <div className="absolute inset-0 opacity-20">
+                    <Image
+                      src="/starbucks-caramel-frappuccino-copycat-recipe-DDMFS.jpg"
+                      alt="Caramel Frappuccino"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <div className="bg-white rounded-xl p-4">
-                    <div className="text-2xl font-bold text-starbucks-green">40%</div>
-                    <div className="text-sm text-gray-600">Caramel Drink Share</div>
+
+                  <div className="relative">
+                    <div className="text-6xl mb-6">🏆</div>
+                    <h3 className="text-2xl font-bold text-white mb-4">Market Insights</h3>
+                    <p className="text-green-50 text-lg mb-6">
+                      The rankings not only reflect current preferences but also signal future directions in beverage development. Starbucks continues to lead industry trends through constant innovation and experience optimization.
+                    </p>
+
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4">
+                        <div className="text-2xl font-bold text-starbucks-green">90%</div>
+                        <div className="text-sm text-gray-600">Iced Drink Preference</div>
+                      </div>
+                      <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4">
+                        <div className="text-2xl font-bold text-starbucks-green">40%</div>
+                        <div className="text-sm text-gray-600">Caramel Drink Share</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -399,12 +476,16 @@ export default function Top10ListsPage() {
               With these insights, why not try one of the popular drinks from the list or ask a barista for their secret recommendation? Your new favorite is just an order away!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-starbucks-green px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
-                Explore Popular Drinks
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-starbucks-green transition-colors duration-300">
-                Ask a Barista
-              </button>
+              <Link href="#">
+                <button className="bg-white text-starbucks-green px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  Explore Popular Drinks
+                </button>
+              </Link>
+              <Link href="#">
+                <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-starbucks-green transition-colors duration-300">
+                  Ask a Barista
+                </button>
+              </Link>
             </div>
           </div>
         </section>
