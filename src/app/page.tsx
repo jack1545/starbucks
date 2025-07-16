@@ -44,13 +44,13 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link href="#">
+              <Link href="/recipes">
                 <button className="btn-starbucks flex items-center">
                   <Coffee className="w-5 h-5 mr-2" />
                   Explore Recipes
                 </button>
               </Link>
-              <Link href="#">
+              <Link href="/starbucks-app-guide">
                 <button className="bg-white text-starbucks-green font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg flex items-center">
                   <Star className="w-5 h-5 mr-2" />
                   Official App Guide
@@ -216,7 +216,7 @@ export default function HomePage() {
                   Browse All Recipes
                 </button>
               </Link>
-              <Link href="#">
+              <Link href="/how-to-order">
                 <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-starbucks-green transition-colors duration-300">
                   Learn How to Order
                 </button>
